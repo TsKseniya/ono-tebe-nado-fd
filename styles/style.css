@@ -1,33 +1,39 @@
 /*СТИЛИ ДЛЯ HEADER*/
 .header {
-  height: 293px;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+  height: 295px;
   padding: 0 50px 0 50px;
 }
 
-.header_content {
-  height: 293px;/*Подумать как вынести это в общий*/
+.header__links-list {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: row;
+  justify-content: start;
+  gap: 32.9px;
 }
 
-.header_menu_list {
-  display: flex;
-  list-style-type: circle;
-}
-
-.header_menu_item {
+.header__links-list-item {
   text-decoration: underline;
-  margin-left: 13px;
+  list-style-type: circle;
+  color: #000000;
+  font-size: 18px;
+  line-height: 100%;
+  text-underline-offset: 3px;
 }
 
-.header_menu_item.header_menu_item_active {
+.header__links-list-item.header__link_active {
   text-decoration: none;
 }
 
-.logo {
- display:block;
- width: 148px;
+.header__links-list-item_no-bullit {
+  list-style: none;
+}
+
+.header__logo {
+ display: block;
+ width: 138px;
  height: 105px;
 }
 
@@ -35,17 +41,18 @@
   width: 100%;
 }
 
-.header_contacts {
+.header__address {
   width: 240px;
-  height: 98px;
+  justify-self: end;
 }
 
-.contacts_item {
+.header__address-item {
   display: block;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 24.3px;
+  text-underline-offset: 4px;
 }
 
 .contact_underline {
@@ -66,7 +73,7 @@
   background-color: rgb(0 0 0/0.6);
 }
 
-.cover_title{
+.cover_title {
   padding: 165px 50px 0 50px;
   font-size: 100px;
   text-transform: uppercase;
@@ -80,7 +87,7 @@
   display: block;
 }
 
-.text_center{
+.text_center {
   text-align: center;
   margin-top: 20px;
   margin-right: 330.5px;
