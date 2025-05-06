@@ -20,13 +20,13 @@
   line-height: 100%;
 }
 
-.header__link_active {
-  text-decoration: none;
-}
-
-.header__link_not_active {
+.header__link {
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+
+.header__link_active {
+  text-decoration: none;
 }
 
 .header__links-list-item_no-bullit {
@@ -69,7 +69,7 @@
   background-size: auto 100%;
   position: relative;
   padding: 0 50px 50px 50px;
-  z-index: -2;
+  z-index: 1;
 }
 
 .overlay {
@@ -78,7 +78,7 @@
   width: 100%;
   position: absolute;
   left: 0;
-  z-index: -1;
+  z-index: 2;
 }
 
 .cover__title {
@@ -113,6 +113,7 @@
   align-items: center;
   margin-top: 105px;
 }
+
 .description_text {
   font-size: 22px;
   text-transform: uppercase;
@@ -121,6 +122,12 @@
   line-height: 28px;
   word-spacing: 18.65px;
   text-align: center;
+}
+
+.cover__title,
+.cover_description {
+  position: relative;
+  z-index: 3;
 }
 
 .bet_button {
@@ -173,6 +180,7 @@
  background-size: cover;
  background-position: center;
  position: relative;
+ color: #FFFFFF; 
 }
 
 .card-link {
@@ -182,24 +190,23 @@
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  z-index: -2;
+  z-index: 1;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  z-index: -2;
+  z-index: 1;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  z-index: -2;
+  z-index: 1;
 }
 
 .card__title {
   font-size: 22px;
   text-transform: uppercase;
   font-weight: 700;
-  color: #FFFFFF;
   line-height: 120%;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -210,9 +217,14 @@
 .card__text {
   font-size: 20px;
   font-weight: 400;
-  color: #FFFFFF;
   line-height: 120%;
   padding: 0 40px 47px 40px;
+}
+
+.card__title,
+.card__text {
+  position: relative;
+  z-index: 3;
 }
 
 .lots__look-more-link {
@@ -270,16 +282,17 @@
   padding-top: 3px;
 }
 
+.about__text-container {
+ display: flex;
+ flex-direction: column;
+ gap: 23px;
+}
+
 .about__text {
   font-size: 20px;
   font-weight: 400;
   color: #000000;
   line-height: 24px;
-  margin-bottom: 23px;
-}
-
-.about__text-last {
-  margin-bottom: 0;
 }
 
 /*СТИЛИ ДЛЯ FOOTER*/
@@ -317,13 +330,13 @@
   line-height: 100%;
 }
 
-.footer__link_active {
-  text-decoration: none;
-}
-
-.footer__link_not_active {
+.footer__link {
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+
+.footer__link_active {
+  text-decoration: none;
 }
 
 .footer__social-list {
